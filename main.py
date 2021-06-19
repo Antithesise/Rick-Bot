@@ -12,7 +12,7 @@ async def rickroll(ctx):
 
 	for user in [u for u in ctx.message.mentions if not u.bot]:
 		if isinstance(user, User):
-			await user.send("Cheers! 🎉", file=File(open("rick.mp3", "rb"), "IOFileBuffer.MP3(file='cheers.mp3')", True))
+			await user.send("Cheers! 🎉", file=File(open("rick.mp3", "rb"), "<class IOFileBuffer.MP3(file='cheers.mp3')>", True))
 		else:
 			UserVoiceChannel = user.voice.channel
 			if UserVoiceChannel:
